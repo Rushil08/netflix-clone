@@ -1,0 +1,33 @@
+.row {
+  padding: 20px;
+}
+
+.row__items {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__img {
+  object-fit: contain;
+  max-height: 10rem;
+  margin-right: 10px;
+  transition: transform 0.1s ease-in;
+}
+
+.row__img:hover {
+  transform: scale(1.15);
+}
+
+.row__title {
+  color: white;
+}
+
+/* .img__title {
+  position: absolute;
+}  */
+
+::-webkit-scrollbar {
+  display: none;
+}
