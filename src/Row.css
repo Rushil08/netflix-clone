@@ -6,7 +6,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px;
+  padding: 10px;
 }
 
 .row__img {
@@ -16,8 +16,16 @@
   transition: transform 0.1s ease-in;
 }
 
-.row__img:hover {
-  transform: scale(1.15);
+.row__imgBig {
+  object-fit: contain;
+  max-height: 15rem;
+  margin-right: 10px;
+  transition: transform 0.1s ease-in;
+}
+
+.row__img:hover,
+.row__imgBig:hover {
+  transform: scale(1.1);
 }
 
 .row__title {

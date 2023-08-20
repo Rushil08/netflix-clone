@@ -17,8 +17,9 @@
 }
 
 .nav__logo {
-  height: 5rem;
+  height: 2.5rem;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .nav__avatar {

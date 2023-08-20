@@ -17,7 +17,6 @@ function Banner() {
     }
     fetchData();
   }, []);
-  console.log(process.env.REACT_APP_KEY);
   return (
     <header
       className="banner"

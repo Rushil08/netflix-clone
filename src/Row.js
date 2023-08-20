@@ -17,14 +17,22 @@ function Row(props) {
     <div className="row">
       <h1 className="row__title">{props.title}</h1>
       <div className="row__items">
-        {movies.map((movie) => (
-          <img
-            className="row__img"
-            src={`https:image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-            alt={movie.name}
-            key={movie.id}
-          />
-        ))}
+        {movies.map(
+          (movie) =>
+            ((props.isBig && movie.poster_path) ||
+              (!props.isBig && movie.backdrop_path)) && (
+              <img
+                className={props.isBig ? "row__imgBig" : "row__img"}
+                src={
+                  props.isBig
+                    ? `https:image.tmdb.org/t/p/original/${movie.poster_path}`
+                    : `https:image.tmdb.org/t/p/original/${movie.backdrop_path}`
+                }
+                alt={movie.name}
+                key={movie.id}
+              />
+            )
+        )}
       </div>
     </div>
   );
