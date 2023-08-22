@@ -41,7 +41,7 @@ function LoginScreen() {
                     setSignIn(true);
                   }}
                 >
-                  Get Started >
+                  Get Started {">"}
                 </button>
               </form>
             </div>

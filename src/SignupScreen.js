@@ -2,10 +2,12 @@ import React from "react";
 import "./SignupScreen.css";
 import { auth } from "./firebase";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignupScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   function register(e) {
     e.preventDefault();
@@ -19,6 +21,7 @@ function SignupScreen() {
     auth.signInWithEmailAndPassword(email, password).catch((error) => {
       alert(error.message);
     });
+    navigate("/home");
   }
 
   return (

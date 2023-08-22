@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import "./Nav.css";
 import { useState } from "react";
+import { getAuth, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const [showNav, handleShowNav] = useState(false);
+  const navigate = useNavigate();
 
   const transitionNavBar = () => {
     if (window.scrollY > 100) {
@@ -12,6 +15,17 @@ function Nav() {
       handleShowNav(false);
     }
   };
+
+  const auth = getAuth();
+  function logout() {
+    signOut(auth)
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", transitionNavBar);
@@ -28,6 +42,9 @@ function Nav() {
             alt="logo"
           />
         </a>
+        <button className="nac__logoutbtn" onClick={logout}>
+          Sign Out
+        </button>
         <a href="/">
           <img
             className="nav__avatar"
