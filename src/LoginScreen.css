@@ -19,6 +19,7 @@
   position: fixed;
   z-index: 1;
   padding: 15px;
+  top: 10px;
 }
 
 .loginScreen__button {
@@ -34,6 +35,7 @@
   font-size: 0.9rem;
   border-radius: 5px;
   border: none;
+  top: 10px;
 }
 
 .loginScreen__body {
@@ -64,14 +66,9 @@
   padding: 10px;
 }
 
-/* .loginScreen__input {
-  position: absolute;
-  top: 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-} */
+.loginScreen__input {
+  max-width: 40%;
+}
 
 .loginScreen__input input {
   background-color: rgba(33, 33, 33, 0.6);
@@ -83,6 +80,7 @@
   color: white;
   padding-left: 10px;
 }
+
 ::placeholder {
   color: rgb(189, 189, 189);
   padding-top: 15px;
