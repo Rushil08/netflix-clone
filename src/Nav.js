@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Nav.css";
 import { useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
@@ -35,17 +35,17 @@ function Nav() {
   return (
     <div className={`nav ${showNav ? "nav__background" : ""}`}>
       <div className="nav__contents">
-        <a href="/">
+        <a href="#">
           <img
             className="nav__logo"
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
             alt="logo"
           />
         </a>
-        <button className="nac__logoutbtn" onClick={logout}>
+        <button className="nav__logoutbtn" onClick={logout}>
           Sign Out
         </button>
-        <a href="/">
+        <a href="#">
           <img
             className="nav__avatar"
             src="https://loodibee.com/wp-content/uploads/Netflix-avatar-2.png"

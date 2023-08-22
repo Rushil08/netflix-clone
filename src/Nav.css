@@ -14,6 +14,8 @@
 .nav__contents {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  /* align-items: center; */
 }
 
 .nav__logo {
@@ -26,4 +28,18 @@
   height: 3rem;
   padding: 0.7rem;
   margin-right: 0.3rem;
+}
+
+.nav__logoutbtn {
+  height: 2.5rem;
+  padding: 0.7rem;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  position: fixed;
+  right: 100px;
 }
